@@ -127,4 +127,22 @@ function gooseFilter(birds) {
 
     return rez;
 }
-
+/*
+Create a function that takes 2 nonnegative integers in form of a string as an input, and outputs the sum (also as a string):
+Example: (Input1, Input2 -->Output): "4",  "5" --> "9"
+*/
+function sumStr(a, b) {
+    let first = parseInt(a);
+    let second = parseInt(b);
+    if (isNaN(first)) {
+        first = 0;
+    }
+    if (isNaN(second)) {
+        second = 0;
+    }
+    return "" + (first + second);
+}
+// or
+function sumStr(a,b) {
+    return String(Number(a)+Number(b));
+  }
