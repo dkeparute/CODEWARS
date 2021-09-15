@@ -177,3 +177,8 @@ It is a less well known fact that if something is true, and Chuck doesn't want i
 
 Your task is to be more like Chuck (ha! good luck!). You must return false without ever actually using the word false...
 */
+// Very simple, given a number, find its opposite.
+function opposite(number) {
+    //your code here
+    return -number;
+  }
