@@ -143,11 +143,11 @@ function sumStr(a, b) {
     return "" + (first + second);
 }
 // or
-function sumStr(a,b) {
-    return String(Number(a)+Number(b));
-  }
-  /*
-  We need a function that can transform a string into a number. What ways of achieving this do you know?
+function sumStr(a, b) {
+    return String(Number(a) + Number(b));
+}
+/*
+We need a function that can transform a string into a number. What ways of achieving this do you know?
 
 Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
 
@@ -157,15 +157,23 @@ Examples
 "1405" --> 1405
 "-7" --> -7
 */
-var stringToNumber = function(str){
+var stringToNumber = function (str) {
     // put your code here
     return Number(str);
-  }
+}
 //   or
-var stringToNumber = function(str){
+var stringToNumber = function (str) {
     return +str;
-  }
+}
 //   or
-var stringToNumber = function(str){
+var stringToNumber = function (str) {
     return parseInt(str);
-  }
+}
+
+/*
+It's a well known fact that anything Chuck Norris wants, he gets. As a result Chuck very rarely has to use the word false.
+
+It is a less well known fact that if something is true, and Chuck doesn't want it to be, Chuck can scare the truth with his massive biceps, and it automatically becomes false.
+
+Your task is to be more like Chuck (ha! good luck!). You must return false without ever actually using the word false...
+*/
