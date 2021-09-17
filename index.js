@@ -240,3 +240,17 @@ If no occurrences can be found, a count of 0 should be returned.
 function strCount(str, letter){  
     return str.split(letter).length-1
   }
+//   Code as fast as you can! You need to double the integer and return it.
+function doubleInteger(i) {
+  
+    // i will be an integer. Double it and return it.
+    return i*2;
+  }
+  /*In this Kata we are passing a number (n) into a function.
+
+Your code will determine if the number passed is even (or not).
+
+The function needs to return either a true or false.
+
+Numbers may be positive or negative, integers or floats.
+*/
