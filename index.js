@@ -182,3 +182,61 @@ function opposite(number) {
     //your code here
     return -number;
   }
+
+  /*
+Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+  */
+function arrayMadness(a, b) {
+    let firstArray = 0
+    let secondArray = 0
+      for (let i = 0; i < a.length; i++) {
+        firstArray+= a[i]**2
+      }
+      
+      for(let i = 0; i < b.length; i++) {
+        secondArray += b[i]**3
+      }
+      
+      return firstArray > secondArray
+    }
+/*
+There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+Your task is to change the letters with diacritics:
+
+ą -> a,
+ć -> c,
+ę -> e,
+ł -> l,
+ń -> n,
+ó -> o,
+ś -> s,
+ź -> z,
+ż -> z
+*/
+function correctPolishLetters (string) {
+    return string
+    .replace(/ł/g, 'l')
+    .replace(/ą/g, 'a')
+    .replace(/ć/g, 'c')
+    .replace(/ę/g, 'e')
+    .replace(/ń/g, 'n')
+    .replace(/ó/g, 'o')
+    .replace(/ś/g, 's')
+    .replace(/ź/g, 'z')
+    .replace(/ż/g, 'z')
+  }
+
+  /*
+  All Star Code Challenge #18
+
+Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+If no occurrences can be found, a count of 0 should be returned.
+
+("Hello", "o")  ==>  1
+("Hello", "l")  ==>  2
+("", "z")       ==>  0*/
+function strCount(str, letter){  
+    return str.split(letter).length-1
+  }
