@@ -309,3 +309,17 @@ String will never be empty and you do not need to account for different data typ
     }
     return smallest.length;
   }
+
+  /*
+  Complete the solution so that it reverses the string passed into it.
+  'world'  =>  'dlrow'*/
+  function solution(str){
+      let splitString = str.split("");
+      let reverseArray = splitString.reverse();
+      let joinArray = reverseArray.join("");
+      return joinArray;
+}
+// greitesnis variantas:
+function solution(str){
+    return str.split('').reverse().join('');  
+  }
