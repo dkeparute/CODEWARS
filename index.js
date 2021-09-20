@@ -177,149 +177,170 @@ It is a less well known fact that if something is true, and Chuck doesn't want i
 
 Your task is to be more like Chuck (ha! good luck!). You must return false without ever actually using the word false...
 */
-// Very simple, given a number, find its opposite.
-function opposite(number) {
-    //your code here
-    return -number;
-  }
 
-  /*
-Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
-  */
-function arrayMadness(a, b) {
-    let firstArray = 0
-    let secondArray = 0
-      for (let i = 0; i < a.length; i++) {
-        firstArray+= a[i]**2
-      }
-      
-      for(let i = 0; i < b.length; i++) {
-        secondArray += b[i]**3
-      }
-      
-      return firstArray > secondArray
+function ifChuckSaysSo() {
+    return !true;
+
+    // Very simple, given a number, find its opposite.
+    function opposite(number) {
+        //your code here
+        return -number;
     }
-/*
-There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
 
-Your task is to change the letters with diacritics:
+    /*
+  Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+    */
+    function arrayMadness(a, b) {
+        let firstArray = 0
+        let secondArray = 0
+        for (let i = 0; i < a.length; i++) {
+            firstArray += a[i] ** 2
+        }
 
-ą -> a,
-ć -> c,
-ę -> e,
-ł -> l,
-ń -> n,
-ó -> o,
-ś -> s,
-ź -> z,
-ż -> z
-*/
-function correctPolishLetters (string) {
-    return string
-    .replace(/ł/g, 'l')
-    .replace(/ą/g, 'a')
-    .replace(/ć/g, 'c')
-    .replace(/ę/g, 'e')
-    .replace(/ń/g, 'n')
-    .replace(/ó/g, 'o')
-    .replace(/ś/g, 's')
-    .replace(/ź/g, 'z')
-    .replace(/ż/g, 'z')
-  }
+        for (let i = 0; i < b.length; i++) {
+            secondArray += b[i] ** 3
+        }
 
-  /*
-  All Star Code Challenge #18
+        return firstArray > secondArray
+    }
+    /*
+    There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+    
+    Your task is to change the letters with diacritics:
+    
+    ą -> a,
+    ć -> c,
+    ę -> e,
+    ł -> l,
+    ń -> n,
+    ó -> o,
+    ś -> s,
+    ź -> z,
+    ż -> z
+    */
+    function correctPolishLetters(string) {
+        return string
+            .replace(/ł/g, 'l')
+            .replace(/ą/g, 'a')
+            .replace(/ć/g, 'c')
+            .replace(/ę/g, 'e')
+            .replace(/ń/g, 'n')
+            .replace(/ó/g, 'o')
+            .replace(/ś/g, 's')
+            .replace(/ź/g, 'z')
+            .replace(/ż/g, 'z')
+    }
 
-Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
-
-If no occurrences can be found, a count of 0 should be returned.
-
-("Hello", "o")  ==>  1
-("Hello", "l")  ==>  2
-("", "z")       ==>  0*/
-function strCount(str, letter){  
-    return str.split(letter).length-1
-  }
-//   Code as fast as you can! You need to double the integer and return it.
-function doubleInteger(i) {
+    /*
+    All Star Code Challenge #18
   
-    // i will be an integer. Double it and return it.
-    return i*2;
-  }
-  /*In this Kata we are passing a number (n) into a function.
-
-Your code will determine if the number passed is even (or not).
-
-The function needs to return either a true or false.
-
-Numbers may be positive or negative, integers or floats.
-*/
-function testEven(n) {
-    if ( n % 2 === 0 ){
-      return true;
+  Create a function that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+  
+  If no occurrences can be found, a count of 0 should be returned.
+  
+  ("Hello", "o")  ==>  1
+  ("Hello", "l")  ==>  2
+  ("", "z")       ==>  0*/
+    function strCount(str, letter) {
+        return str.split(letter).length - 1
     }
-    else return false;
- }
- /*
- Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+    //   Code as fast as you can! You need to double the integer and return it.
+    function doubleInteger(i) {
 
-For example:
-
-summation(2) -> 3
-1 + 2
-
-summation(8) -> 36
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
-*/
-
-var summation = function (num) {
-    let sum = 0
-    for(let i = 0; i <= num; i++) {
-        sum += i
+        // i will be an integer. Double it and return it.
+        return i * 2;
     }
-    return sum
-  }
-  console.log(summation(1));
-
-  /*
-  In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
-
-Example:
-
-highAndLow("1 2 3 4 5");  // return "5 1"
-highAndLow("1 2 -3 4 5"); // return "5 -3"
-highAndLow("1 9 3 4 -5"); // return "9 -5"
-*/
-function highAndLow(numbers){
-    return Math.max(...numbers.split(' ')) + ' ' + Math.min(...numbers.split(' '));
-  }
-
-  /*
-  Simple, given a string of words, return the length of the shortest word(s).
-
-String will never be empty and you do not need to account for different data types.
+    /*In this Kata we are passing a number (n) into a function.
+  
+  Your code will determine if the number passed is even (or not).
+  
+  The function needs to return either a true or false.
+  
+  Numbers may be positive or negative, integers or floats.
   */
-  function findShort(s){
-    var arr = s.split(' ');
-    var smallest = arr[0];
-    for (var i = 0; i < arr.length; i++) {
-      if(arr[i].length < smallest.length){
-        smallest = arr[i];
-      }
+    function testEven(n) {
+        if (n % 2 === 0) {
+            return true;
+        }
+        else return false;
     }
-    return smallest.length;
-  }
+    /*
+    Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+   
+   For example:
+   
+   summation(2) -> 3
+   1 + 2
+   
+   summation(8) -> 36
+   1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+   */
 
-  /*
-  Complete the solution so that it reverses the string passed into it.
-  'world'  =>  'dlrow'*/
-  function solution(str){
-      let splitString = str.split("");
-      let reverseArray = splitString.reverse();
-      let joinArray = reverseArray.join("");
-      return joinArray;
-}
-// greitesnis variantas:
-function solution(str){
-    return str.split('').reverse().join('');  
-  }
+    var summation = function (num) {
+        let sum = 0
+        for (let i = 0; i <= num; i++) {
+            sum += i
+        }
+        return sum
+    }
+    console.log(summation(1));
+
+    /*
+    In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+  
+  Example:
+  
+  highAndLow("1 2 3 4 5");  // return "5 1"
+  highAndLow("1 2 -3 4 5"); // return "5 -3"
+  highAndLow("1 9 3 4 -5"); // return "9 -5"
+  */
+    function highAndLow(numbers) {
+        return Math.max(...numbers.split(' ')) + ' ' + Math.min(...numbers.split(' '));
+    }
+
+    /*
+    Simple, given a string of words, return the length of the shortest word(s).
+  
+  String will never be empty and you do not need to account for different data types.
+    */
+    function findShort(s) {
+        var arr = s.split(' ');
+        var smallest = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length < smallest.length) {
+                smallest = arr[i];
+            }
+        }
+        return smallest.length;
+    }
+
+    /*
+        Complete the solution so that it reverses the string passed into it.
+        'world'  =>  'dlrow'*/
+
+    function solution(str) {
+        let splitString = str.split("");
+        let reverseArray = splitString.reverse();
+        let joinArray = reverseArray.join("");
+        return joinArray;
+    }
+    // // greitesnis variantas:
+    // function solution(str) {
+    //     return str.split('').reverse().join('');
+    // }
+
+    /*
+       Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+    
+    Example:
+    
+    ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+    
+    */
+    function removeEveryOther(arr) {
+        let newArr = [];
+        for (i = 0; i < arr.length; i += 2) {
+            newArr.push(arr[i])
+        }
+        return newArr;
+    }
