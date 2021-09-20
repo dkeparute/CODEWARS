@@ -436,20 +436,20 @@ DNAStrand ("GTAT") // return "CATA"
 */
 function DNAStrand(dna){
     dna = dna.toUpperCase();
-    let complement = '';
+    let newName = '';
     for(let i = 0; i < dna.length; i++){
     if(dna[i] === 'T'){
-    complement += 'A';
+        newName += 'A';
     }
     if(dna[i] === 'A'){
-    complement += 'T';
+        newName += 'T';
     }
     if(dna[i] === 'C'){
-    complement += 'G';
+        newName += 'G';
     }
     if(dna[i] === 'G'){
-    complement += 'C';
+        newName += 'C';
     }
     }
-    return complement;
+    return newName;
     }
