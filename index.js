@@ -392,9 +392,9 @@ function countPositivesSumNegatives(input) {
     if (input === null || input.length < 1) {
         return [];
     }
-    var array = [0, 0];
+   let array = [0, 0];
 
-    for(var i = 0; i < input.length; i++) {
+    for(let i = 0; i < input.length; i++) {
         if(input[i] <= 0) {
             array[1] += input[i];
       } else {
@@ -404,4 +404,18 @@ function countPositivesSumNegatives(input) {
     return array;
 }
 
-
+/*
+Given the a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value.
+*/
+function pipeFix(numbers){
+    let firstNo = numbers[0];
+    let lastNo = numbers[numbers.length - 1];
+    let newArr = [];
+        
+    for (let i = firstNo; i <= lastNo; i++) {
+      newArr.push(i);
+    }
+      return newArr;
+    }
+      
+ console.log(pipeFix([1,2,3,5,6,8,9]));
